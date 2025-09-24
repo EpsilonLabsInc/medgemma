@@ -1,26 +1,22 @@
-#transformers==4.50.0
-#bitsandbytes>=0.41.3
+wheel==0.45.1
+torch==2.7.1
+torchvision==0.22.1
+tornado==6.5.1
 
-peft>=0.6.0
-bitsandbytes>=0.41.0
 
-datasets
-evaluate
+tokenizers==0.21.1
+accelerate==1.8.1
+bitsandbytes==0.46.0
+datasets==3.6.0
+pillow==11.2.1
 
-tensorboard
-transformers
-trl
+pydicom==3.0.1
+scipy==1.15.3
+peft==0.15.2
+einops==0.8.1
+timm==0.9.12
 
-pydicom
-pillow
-scipy
 
-jinja2>=3.1.0
-gdcm
-python-gdcm
-
-pylibjpeg
-pylibjpeg-libjpeg
-pylibjpeg-openjpeg
-deepspeed
-torchvision
+trl==0.19.0
+deepspeed==0.17.1
+flash-attn==2.7.3

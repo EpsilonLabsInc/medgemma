@@ -46,7 +46,15 @@ model_kwargs = dict(
 #     bnb_4bit_quant_storage=model_kwargs["torch_dtype"],
 # )
 
-model_med_gemma = AutoModelForImageTextToText.from_pretrained(model_id, **model_kwargs)
+model_path = "/home/eric/projects/medgemma/medgemma-4b-it"
+#model_med_gemma = AutoModelForImageTextToText.from_pretrained(model_id, **model_kwargs)
+
+model_med_gemma = AutoModelForImageTextToText.from_pretrained(
+    "/home/eric/projects/medgemma/medgemma-4b-it",
+    local_files_only=True,
+    torch_dtype=torch.bfloat16,
+    device_map="auto",
+)
 
 
 path = "/home/eric/projects/InternVL-3x/internvl_chat/pretrained/InternVL3-8B/"
