@@ -240,13 +240,14 @@ if __name__ == "__main__":
 
     args = SFTConfig(
         output_dir=f"training/test-{timestamp}",
-        num_train_epochs=5,
+        num_train_epochs=3,
         per_device_train_batch_size=4,  # This is per GPU now
         gradient_accumulation_steps=16,  # May want to adjust this for distributed training
         gradient_checkpointing=True,
         optim="adamw_torch_fused",
         logging_steps=2,
         save_strategy="epoch",
+        # save_steps=10,
         learning_rate=1e-5,
         bf16=True,
         max_grad_norm=0.3,
